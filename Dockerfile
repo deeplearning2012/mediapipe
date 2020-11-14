@@ -44,12 +44,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install --upgrade setuptools
-RUN pip3 install wheel
-RUN pip3 install future
-RUN pip3 install six==1.14.0
-RUN pip3 install tensorflow==1.14.0
-RUN pip3 install tf_slim
+RUN pip3 install --upgrade setuptools -i https://pypi.doubanio.com/simple/
+RUN pip3 install wheel -i https://pypi.doubanio.com/simple/
+RUN pip3 install future -i https://pypi.doubanio.com/simple/
+RUN pip3 install six==1.14.0 -i https://pypi.doubanio.com/simple/
+RUN pip3 install tensorflow==1.14.0 -i https://pypi.doubanio.com/simple/
+RUN pip3 install tf_slim -i https://pypi.doubanio.com/simple/
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
